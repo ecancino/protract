@@ -1,12 +1,13 @@
-module.exports = function protract(protracted) {
-  var objects = [];
-  objects.push.apply(objects, arguments) && objects.shift();
+module.exports = function protract() {
+  var objects = (Array.prototype.slice.call(arguments)).filter(function(n) { return n; }),
+      final = {};
 
   objects.forEach(function(object) {
     for (var property in object) {
       var descriptor = Object.getOwnPropertyDescriptor(object, property) || { value: object[property] };
-      Object.defineProperty(protracted, property, descriptor);
+      Object.defineProperty(final, property, descriptor);
     }
   });
-  return protracted;
+
+  return final;
 };
