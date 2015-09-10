@@ -1,5 +1,5 @@
 module.exports = function protract() {
-  var objects = (Array.prototype.slice.call(arguments)).filter(function(n) { return n; }),
+  var objects = (Array.prototype.slice.call(arguments)).filter(Boolean),
       final = {};
 
   objects.forEach(function(object) {
