@@ -70,6 +70,11 @@ describe('protract', function() {
     expect(protracted).to.have.all.keys('language', 'say');
   });
 
+  it('should update values for existing keys', function() {
+    var protracted = protract({ 'language': 'javascript' }, { language: 'coffeescript' });
+    expect(protracted.language).to.be.string('coffeescript');
+  });
+
   xit('should support Accesors', function() {
     var objectCreate = Object.create(Object.prototype, {
       ten: {
