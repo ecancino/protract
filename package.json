@@ -1,10 +1,10 @@
 {
   "name": "protract",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Copying object properties, the robust way",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha src/index.test.js -w"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/ecancino/protract/issues"
   },
-  "homepage": "https://github.com/ecancino/protract"
+  "homepage": "https://github.com/ecancino/protract",
+  "devDependencies": {
+    "chai": "3.2.0",
+    "mocha": "2.3.2"
+  }
 }
