@@ -75,7 +75,16 @@ describe('protract', function() {
     expect(protracted.language).to.be.string('coffeescript');
   });
 
-  xit('should support Accesors', function() {
+  it('should make a clone of the object', function() {
+    var original = { 'language': 'javascript' },
+        extended = { 'language': 'coffeescript' },
+        protracted = protract(original, extended);
+    original.language = 'typescript';
+    extended.language = 'dart';
+    expect(protracted.language).to.be.string('coffeescript');
+  });
+
+  xit('should support Accessors', function() {
     var objectCreate = Object.create(Object.prototype, {
       ten: {
         configurable: false,

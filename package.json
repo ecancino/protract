@@ -1,14 +1,16 @@
 {
   "name": "protract",
-  "version": "1.3.0",
+  "version": "0.0.0-semantically-released",
   "description": "Copying object properties, the robust way",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha src/index.test.js -w"
+    "test": "mocha src/index.test.js -w",
+    "commit": "git-cz",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ecancino/protract.git"
+    "url": "https://github.com/ecancino/protract.git"
   },
   "author": "Eduardo Cancino <eduardo.cancino@ciudadde.mx> (http://github.com/ecancino)",
   "license": "MIT",
@@ -18,6 +20,12 @@
   "homepage": "https://github.com/ecancino/protract",
   "devDependencies": {
     "chai": "3.2.0",
-    "mocha": "2.3.2"
+    "commitizen": "1.0.4",
+    "cz-conventional-changelog": "1.1.0",
+    "mocha": "2.3.2",
+    "semantic-release": "^4.3.5"
+  },
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
   }
 }
