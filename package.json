@@ -1,6 +1,7 @@
 {
   "name": "protract",
   "description": "Copying object properties, the robust way",
+  "version": "1.4.0",
   "main": "src/index.js",
   "scripts": {
     "commit": "git-cz",
