@@ -1,10 +1,9 @@
 {
   "name": "protract",
-  "version": "0.0.0-semantically-released",
   "description": "Copying object properties, the robust way",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha src/index.test.js -w",
+    "test": "mocha src/index.test.js",
     "commit": "git-cz",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
