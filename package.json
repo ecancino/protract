@@ -22,7 +22,6 @@
     "chai": "3.2.0",
     "commitizen": "1.0.4",
     "cz-conventional-changelog": "1.1.0",
-    "jsdoc-readme": "0.0.2",
     "mocha": "2.3.2",
     "semantic-release": "^4.3.5"
   },
