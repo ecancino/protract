@@ -1,6 +1,5 @@
 {
   "name": "protract",
-  "version": "0.0.0-semantically-released",
   "description": "Copying object properties, the robust way",
   "main": "src/index.js",
   "scripts": {
@@ -29,7 +28,7 @@
     "mocha": "2.3.2",
     "commitizen": "1.0.4",
     "cz-conventional-changelog": "1.1.0",
-    "semantic-release": "^4.2.1"
+    "semantic-release": "^4.3.5"
   },
   "czConfig": {
     "path": "node_modules/cz-conventional-changelog"
