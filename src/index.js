@@ -11,8 +11,10 @@ function protract() {
 
   objects.forEach(function(object) {
     for (var property in object) {
-      var descriptor = Object.getOwnPropertyDescriptor(object, property) || { value: object[property] };
-      Object.defineProperty(final, property, descriptor);
+      if (object.hasOwnProperty(property)) {
+        var descriptor = Object.getOwnPropertyDescriptor(object, property) || { value: object[property] };
+        Object.defineProperty(final, property, descriptor);
+      }
     }
   });
 
