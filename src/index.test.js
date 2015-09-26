@@ -65,7 +65,6 @@ describe('protract', function() {
         enumerable: true
       }
     });
-
     var protracted = protract({ 'language': 'javascript' }, objectCreate);
     expect(protracted).to.have.all.keys('language', 'say');
   });
@@ -84,17 +83,15 @@ describe('protract', function() {
     expect(protracted.language).to.be.string('coffeescript');
   });
 
-  xit('should support Accessors', function() {
-    var objectCreate = Object.create(Object.prototype, {
-      ten: {
-        configurable: false,
-        enumerable: false,
-        get: function() { return 10; },
-        set: function(value) { this.ten = value; }
-      }
+  it('should support Accessors', function() {
+    var withAccesors = {};
+    Object.defineProperty(withAccesors, 'ten', {
+      configurable: true,
+      enumerable: true,
+      get: function() { return 10; },
+      set: function(value) { this.ten = value; }
     });
-
-    var protracted = protract({ 'language': 'javascript' }, objectCreate);
+    var protracted = protract({ 'language': 'javascript' }, withAccesors);
     expect(protracted).to.have.all.keys('language', 'ten');
   });
 
