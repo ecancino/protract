@@ -25,12 +25,18 @@
   "homepage": "https://github.com/ecancino/protract",
   "devDependencies": {
     "chai": "3.2.0",
-    "mocha": "2.3.2",
     "commitizen": "1.0.4",
     "cz-conventional-changelog": "1.1.0",
+    "ghooks": "0.3.2",
+    "mocha": "2.3.2",
     "semantic-release": "^4.3.5"
   },
   "czConfig": {
     "path": "node_modules/cz-conventional-changelog"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm test"
+    }
   }
 }
