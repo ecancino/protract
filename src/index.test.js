@@ -4,7 +4,7 @@ var protract = require('./index.js'),
 describe('protract', function() {
 
   it('should return empty object if no other properties', function() {
-    var protracted = protract(null, {});
+    var protracted = protract({}, {}, {});
     expect(protracted).to.deep.equal({});
   });
 
