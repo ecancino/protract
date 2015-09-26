@@ -88,8 +88,8 @@ describe('protract', function() {
     Object.defineProperty(withAccesors, 'ten', {
       configurable: true,
       enumerable: true,
-      get: function() { return 10; },
-      set: function(value) { this.ten = value; }
+      get: function() { return this.value; },
+      set: function(value) { this.value = value; }
     });
     var protracted = protract({ 'language': 'javascript' }, withAccesors);
     expect(protracted).to.have.all.keys('language', 'ten');
