@@ -16,4 +16,4 @@
 [![downloads](https://img.shields.io/npm/dm/protract.svg?style=flat)](http://npm-stat.com/charts.html?package=protract&from=2015-08-01)
 [![MIT License](https://img.shields.io/npm/l/protract.svg?style=flat)](http://opensource.org/licenses/MIT)
 
-![No dependencies!](https://david-dm.org/ecancino/protract.svg)
+[![No dependencies!](https://david-dm.org/ecancino/protract.svg)](https://david-dm.org/ecancino/protract)
